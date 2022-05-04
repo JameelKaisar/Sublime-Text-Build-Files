@@ -1,0 +1,17 @@
+{
+	"shell_cmd": "node \"${file}\"",
+	"working_dir": "${file_path}",
+	"selector": "source.js",
+	"shell": true,
+
+	"linux": {
+ 		"shell_cmd": "gnome-terminal -- bash -c \"node '${file}' && echo && echo Press ENTER to continue && read line && exit\""
+ 	},
+	"osx": {
+ 		"shell_cmd": "open -a Terminal.app \"node '${file}' && echo && echo Press ENTER to continue && read line && exit\""
+ 		// "shell_cmd": "xterm -e \"node '${file}' && echo && echo Press ENTER to continue && read line && exit\""
+ 	},
+	"windows": {
+		"shell_cmd": "start cmd /k node \"${file}\""
+	}
+}
