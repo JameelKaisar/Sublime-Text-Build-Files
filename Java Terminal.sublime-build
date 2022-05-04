@@ -1,0 +1,18 @@
+{
+	"shell_cmd": "javac \"$file\" && java -classpath \"${file_path}\" \"${file_base_name}\"",
+	"file_regex": "^(...*?):([0-9]*):?([0-9]*)",
+	"working_dir": "${file_path}",
+	"selector": "source.java",
+	"shell": true,
+
+	"linux": {
+		"shell_cmd": "javac '${file}' && gnome-terminal -- bash -c \"java -classpath '${file_path}' '${file_base_name}' && echo && echo Press ENTER to continue && read line && exit\""
+ 	},
+	"osx": {
+		"shell_cmd": "javac '${file}' && open -a Terminal.app \"java -classpath '${file_path}' '${file_base_name}' && echo && echo Press ENTER to continue && read line && exit\""
+        // "shell_cmd": "javac '${file}' && xterm -e \"java '${file_path}' '${file_base_name}' && echo && echo Press ENTER to continue && read line && exit\""
+ 	},
+	"windows": {
+		"shell_cmd": "javac \"${file}\" && start cmd /k java -classpath \"${file_path}\" \"${file_base_name}\""
+	}
+}
