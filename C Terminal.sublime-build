@@ -10,7 +10,7 @@
  	},
 	"osx": {
 		"shell_cmd": "gcc '${file}' -o '${file_path}/${file_base_name}' && open -a Terminal.app \"'${file_path}/${file_base_name}' && echo && echo Press ENTER to continue && read line && exit\""
-        // "shell_cmd": "gcc '${file}' -o '${file_path}/${file_base_name}' && xterm -e \"'${file_path}/${file_base_name}' && echo && echo Press ENTER to continue && read line && exit\""
+		// "shell_cmd": "gcc '${file}' -o '${file_path}/${file_base_name}' && xterm -e \"'${file_path}/${file_base_name}' && echo && echo Press ENTER to continue && read line && exit\""
  	},
 	"windows": {
 		"shell_cmd": "gcc \"${file}\" -o \"${file_path}/${file_base_name}\" && start cmd /k \"${file_path}/${file_base_name}\""
